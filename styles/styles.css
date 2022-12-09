@@ -1,0 +1,461 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Variables */
+    --card-checkbox-icon: url(/assets/icons/checkbox-icon.svg);
+    --paragraph-size: 0.9rem;
+    --h1-size: 2rem;
+    --h2-size: 1.6rem;
+    --h3-size: 1.4rem;
+    --box-shadow: 0px 5px 44px 0px rgba(0, 0, 0, 0.1);
+    /* Color styles */
+    --main-green-color: #299977; 
+    --highlight-color: #99351A;
+    --main-black-color: #252525;
+}
+
+/* Text styles */
+p { font-size: var(--paragraph-size); margin: 0; color: var(--main-black-color); line-height: 20px;}
+h1 { font-size: var(--h1-size); font-weight: 600; text-align: center; columns: var(--main-black-color);}
+h2 { font-size: var(--h2-size); font-weight: 600; color: var(--main-black-color);}
+h3 { font-size: var(--h3-size); font-weight: 600; color: var(--main-black-color);}
+
+/* Flex classes */
+.flex-center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---- Components ---- */
+/* Nav bar */
+.navbar {
+    display: flex;
+    background-color: var(--main-black-color);
+    padding: 15px;
+}
+
+.navbar__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.navbar__list-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 120px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar__list-item a:hover {
+    cursor: pointer;
+    background-color: var(--main-green-color);
+}
+
+.navbar__list-item--logo {
+    width: 90px;
+}
+
+/* Buttons */
+.button {
+    width: 140px;
+    height: 37px;;
+    border-radius: 5px;
+    background-color: var(--main-green-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+}
+.button--align-right {
+    margin-left: auto;
+}
+.button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.button--round{
+    border: 1px solid var(--main-black-color);
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.button--round:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-green-color);
+    border-color: var(--main-green-color);
+}
+
+/* Hero */
+.hero {
+    background-image: url("/assets/photos/09-night.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    height: 50vh;
+}
+
+.hero h1 {
+    margin: auto;
+    color: white;
+}
+
+.hero--smaller { height: 30vh; }
+
+/* Cards */
+.card {
+    max-width: 800px;
+    padding: 50px;
+}
+
+.card__item {
+    margin: 20px 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;  
+    box-shadow: var(--box-shadow);
+}
+
+.card__img-container {
+    flex-basis: 200px;
+    flex-grow: 999;
+}
+
+.card__img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card__info-container {
+    min-height: 150px;
+    flex-basis: 400px;
+    flex-grow: 1;
+    margin: 40px 0px;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.card__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__icon-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.card__icon img{
+    width: 30px;
+    padding-bottom: 7px;
+}
+
+.card__icon p {
+    font-size: 0.7rem;
+}
+
+.card__price { 
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.card__dropdown-list {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column;
+    gap: 0px 20px;
+    flex-wrap: wrap;
+}
+
+.card__list-item::before {
+    content: var(--card-checkbox-icon);
+    margin-right: 5px;
+}
+
+.card__list-item {
+    margin: auto 0;
+    padding: 5px 0px;
+    font-size: 0.8rem;
+}
+
+.card__dropdown-header {
+    color: var(--highlight-color);
+    padding-bottom: 10px;
+}
+
+.card__dropdown-header:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Calendar */
+.calendar {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.calendar__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.calendar__dates-list {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+}
+
+.calendar__date:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-green-color);
+}
+
+.calendar__date--chosen {
+    color: white;
+    background-color: var(--main-green-color);
+}
+
+.calendar__date--next-month {
+    color: rgb(206, 201, 201);
+}
+
+.calendar__days-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__day {
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* ----- Pages ----- */
+/* Landing Page */
+.booking-bar {
+    position: relative;
+}
+
+.booking-bar h3 {
+    position: absolute;
+    color: white;
+    left: 35px;
+    top: -40px;
+}
+
+.form {
+    padding: 30px 30px 40px 30px;
+    background-color: var(--main-black-color);
+    color: white;
+    border-radius: 10px;
+}
+
+.form__bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form__container {
+    position: relative;
+}
+
+.form__label {
+    position: absolute;
+    left: 3px;
+    top: -5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.form__input {
+    border: none;
+    width: 200px;
+    height: 37px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.event {
+    padding: 70px 10px;
+    margin-top: 50px;
+}
+
+.event__header {
+  max-width: 800px;
+  position: absolute;
+  left: 15px;
+  top: -50px;
+}
+
+.event__container {
+    max-width: 800px;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.event__box {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+}
+.event__box:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.event__box header h3 {
+    color: white;
+    text-align: center;
+}
+.event__box header p {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.event__box-logo {
+    width: 90px;
+    position: absolute;
+    top: 190px;
+}
+
+.event__box--1 {background-image: url(/assets/photos/03-day.jpg);}
+.event__box--2 {background-image: url(/assets/photos/01-day.jpg);}
+.event__box--3 {background-image: url(/assets/photos/04-night.jpg);}
+.event__box--4 {background-image: url(/assets/photos/09-night.jpg);}
+.event__box--5 {background-image: url(/assets/photos/02-day.jpg);}
+.event__box--6 {background-image: url(/assets/photos/08-day.jpg);}
+
+/* Faciliteter Page */
+.faciliteter {
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Booking page */
+.booking {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px 0px;
+    flex-wrap: wrap;
+}
+
+.booking__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 50px;
+}
+
+.booking__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 10px 50px;
+}
+
+.booking__info-data {
+    font-size: 1.2rem;
+}
+
+.overlay {
+    background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+@media screen and (max-width: 800px) {
+
+    .navbar__list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .navbar__list-item a{
+       align-items: flex-end;
+       justify-content: flex-start;
+        font-size: 20px;
+    }
+
+    .navbar__list :nth-child(4) { order: -1; }
+
+    .card__list-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tack för din tid! Hoppas du hade det trevligt
+och lugnt genom koden. Mvh Berat Ukiqi*/

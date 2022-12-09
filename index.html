@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <title>Bonz.ai - Startsida</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li class="navbar__list-item"><a href="bokning.html">Rum</a></li>
+                <li class="navbar__list-item"><a href="#">Evenemang</a></li>
+                <li class="navbar__list-item"><a href="#">Möte</a></li>
+                <li class="navbar__list-item"><a href="index.html"><div><img class="navbar__list-item--logo" src="/assets/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai Logo"></div></a></li>
+                <li class="navbar__list-item"><a href="faciliteter.html">Faciliteter</a></li>
+                <li class="navbar__list-item"><a href="#">Galleri</a></li>
+                <li class="navbar__list-item"><a href="#">Om oss</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <section class="hero flex-center-col">
+        <h1>Där naturen möter teknik i harmoni.</h1>
+        <article class="booking-bar flex-center-row">
+            <h3>Boka rum</h3>
+            <form action="POST" class="form">
+         
+                <article class="form__bar">
+                    <section class="form__container">
+                        <label class="form__label" for="date">Datum:</label><br>
+                        <input class="form__input" id="date" type="date">
+                    </section>
+                    <section class="form__container">
+                        <label class="form__label" for="guests">Antal rum och gäster</label><br>
+                        <input list="guests-per-room" class="form__input" id="guests" name="Guests per room">
+                        <datalist id="guests-per-room">
+                            <option class="form__option" value="1 room 2 guests"></option>
+                            <option class="form__option" value="2 room 2 guests"></option>
+                            <option class="form__option" value="2 room 3 guests"></option>
+                            <option class="form__option" value="2 room 4 guests"></option>
+                        </datalist>
+                    </section>
+                    <a href="bokning.html"><button class="button" type="button">Sök</button></a>
+                </article>
+            </form>
+        </article>
+    </section>
+    
+    <main class="event flex-center-col">
+        <section class="event__container flex-center-row">
+            
+            <header class="event__header">
+                <h2>Event</h2>
+            </header>
+            
+            <article class="event__box event__box--1 flex-center-col">
+                
+                    <header>
+                    <h3>VR-Fika</h3>
+                    <p>18 Oktober</p>
+                </header>
+                <img class="event__box-logo" src="/assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonzai Logo">
+            </article>
+    
+            <article class="event__box event__box--2 flex-center-col">
+                <header>
+                    <h3>Djungelkonferens i VR</h3>
+                    <p>23-25 Oktober</p>
+                </header>
+                <img class="event__box-logo" src="/assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonzai Logo">
+            </article>
+    
+            <article class="event__box event__box--3 flex-center-col">
+                <header>
+                    <h3>Drone Show</h3>
+                    <p>29 Oktober</p>
+                </header>
+                <img class="event__box-logo" src="/assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonzai Logo">
+            </article>
+    
+            <article class="event__box event__box--4 flex-center-col" >
+                <header>
+                    <h3>Virtuellt Spökhus</h3>
+                    <p>31 Oktober</p>
+                </header>
+                <img class="event__box-logo" src="/assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonzai Logo">
+            </article>
+    
+            <article class="event__box event__box--5 flex-center-col" >
+                <header >
+                    <h3>Föreläsning om Metaverse</h3>
+                    <p>14 November</p>
+                </header>
+                <img class="event__box-logo" src="/assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonzai Logo">
+            </article>
+    
+            <article class="event__box event__box--6 flex-center-col">
+                <header>
+                    <h3>Julbord</h3>
+                    <p>2 December</p>
+                </header>
+                <img class="event__box-logo" src="/assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonzai Logo">
+            </article>
+        </section>
+
+    </main>
+</body>
+</html>
