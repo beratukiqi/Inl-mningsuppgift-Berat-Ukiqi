@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-    <title>Din bokning</title>
+    <title>Boka rum</title>
 </head>
 <body>
     <header class="header">
@@ -28,7 +28,7 @@
     </section>
 
     <main class="booking">
-        <section class="booking__wrapper">
+        <div class="booking__wrapper">
             <div class="booking__info">
                 <button class="button--round">-</button>
                 <p class="booking__info-data">1 rum</p>
@@ -39,7 +39,7 @@
                 <p class="booking__info-data">2 gäster</p>
                 <button class="button--round">+</button>
             </div>
-            <section class="calendar">
+            <div class="calendar">
                 <div class="calendar__header">
                     <button class="button--round flex-center-row"></button>
                     <p class="booking__info-data">Oktober</p>
@@ -95,134 +95,143 @@
                         <li class="calendar__date calendar__date--next-month">4</li>
                     </ul>
                 </div>
-            </section>
-        </section>
+            </div>
+        </div>
 
-        <section class="card">
-            <article class="card__item">
-                <div class="card__img-container"><img src="/assets/photos/02-day.jpg" alt="Standard Room"></div>
-                <div class="card__info-container">
-                    <h3>Standard Twin</h3>
-                    <p>Våra standardrum är omkring 17-21 kvm och utrustade med en 160 cm säng. Dessa rum är funktionella och bekväma - allt du behöver för en härlig helg på Bonz.ai</p>
+        <section class="cards">
+            <header class="booking__header">
+                <h2>Boka rum</h2>
+            </header>
+            <article class="cards__item">
+                <div class="cards__img-container"><img src="/assets/photos/02-day.jpg" alt="Standard Room"></div>
+                <div class="cards__info-container">
+                    <header class="cards__header">
+                        <h3>Standard Twin</h3>
+                        <p>Våra standardrum är omkring 17-21 kvm och utrustade med en 160 cm säng. Dessa rum är funktionella och bekväma - allt du behöver för en härlig helg på Bonz.ai</p>
+                    </header>
                     <details>
-                        <summary class="card__dropdown-header">Mer information</summary>
-                        <ul class="card__dropdown-list">
-                            <li class="card__list-item">Frukost inkluderat</li>
-                            <li class="card__list-item">Gym & träning</li>
-                            <li class="card__list-item">Spa & Relax</li>
-                            <li class="card__list-item">Badkar</li>
-                            <li class="card__list-item">Vattenfallsdusch</li>
-                            <li class="card__list-item">Gratis Wifi</li>
-                            <li class="card__list-item">Låst Förvaringsskåp</li>
-                            <li class="card__list-item">Arbetsplats</li>
-                            <li class="card__list-item">Telefon</li>
-                            <li class="card__list-item">Strykhjärn</li>
+                        <summary class="cards__dropdown-header">Mer information</summary>
+                        <ul class="cards__dropdown-list">
+                            <li class="cards__list-item">Frukost inkluderat</li>
+                            <li class="cards__list-item">Gym & träning</li>
+                            <li class="cards__list-item">Spa & Relax</li>
+                            <li class="cards__list-item">Badkar</li>
+                            <li class="cards__list-item">Vattenfallsdusch</li>
+                            <li class="cards__list-item">Gratis Wifi</li>
+                            <li class="cards__list-item">Låst Förvaringsskåp</li>
+                            <li class="cards__list-item">Arbetsplats</li>
+                            <li class="cards__list-item">Telefon</li>
+                            <li class="cards__list-item">Strykhjärn</li>
                         </ul>
                     </details>
-                    <div class="card__footer">
-                        <div class="card__icon-wrapper">
-                            <div class="card__icon flex-center-col">
+                    <div class="cards__footer">
+                        <div class="cards__icon-wrapper">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/people-icon.svg" alt="2 Persons">
                                 <p>2 Personer</p>
                             </div>
-                            <div class="card__icon flex-center-col">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/cash-icon.svg" alt="Costs">
                                 <p>Bästa pris</p>
                             </div>
                         </div>
-                        <div class="card__price-container">
-                            <p class="card__price">2 795 SEK</p>
+                        <div class="cards__price-container">
+                            <p class="cards__price">2 795 SEK</p>
                             <button class="button">Boka nu</button>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <article class="card__item">
-                <div class="card__img-container"><img src="/assets/photos/02-day.jpg" alt="Deluxe Room"></div>
-                <div class="card__info-container">
-                    <h3>Deluxe Twin</h3>
-                    <p>Detta deluxe rum är omkring 25-30 kvm och utrustade med en 180 cm säng. Dessa rum är funktionella och bekväma - allt du behöver för en härlig helg på Bonz.ai</p>
-                    <details class="card__dropdown" >
-                        <summary class="card__dropdown-header">Mer information</summary>
-                        <ul class="card__dropdown-list">
-                            <li class="card__list-item">Frukost inkluderat</li>
-                            <li class="card__list-item">Gym & träning</li>
-                            <li class="card__list-item">Spa & Relax</li>
-                            <li class="card__list-item">Badkar</li>
-                            <li class="card__list-item">Vattenfallsdusch</li>
-                            <li class="card__list-item">Gratis Wifi</li>
-                            <li class="card__list-item">Låsbart förvaringsskåp</li>
-                            <li class="card__list-item">Arbetsplats</li>
-                            <li class="card__list-item">Telefon</li>
-                            <li class="card__list-item">Strykhjärn</li>
-                            <li class="card__list-item">VR-Kit ingår</li>
-                            <li class="card__list-item">VR TV</li>
+            <article class="cards__item">
+                <div class="cards__img-container"><img src="/assets/photos/02-day.jpg" alt="Deluxe Room"></div>
+                <div class="cards__info-container">
+                    <header class="cards__header">
+                        <h3>Deluxe Twin</h3>
+                        <p>Detta deluxe rum är omkring 25-30 kvm och utrustade med en 180 cm säng. Dessa rum är funktionella och bekväma - allt du behöver för en härlig helg på Bonz.ai</p>
+                    </header>
+                    <details class="cards__dropdown" >
+                        <summary class="cards__dropdown-header">Mer information</summary>
+                        <ul class="cards__dropdown-list">
+                            <li class="cards__list-item">Frukost inkluderat</li>
+                            <li class="cards__list-item">Gym & träning</li>
+                            <li class="cards__list-item">Spa & Relax</li>
+                            <li class="cards__list-item">Badkar</li>
+                            <li class="cards__list-item">Vattenfallsdusch</li>
+                            <li class="cards__list-item">Gratis Wifi</li>
+                            <li class="cards__list-item">Låsbart förvaringsskåp</li>
+                            <li class="cards__list-item">Arbetsplats</li>
+                            <li class="cards__list-item">Telefon</li>
+                            <li class="cards__list-item">Strykhjärn</li>
+                            <li class="cards__list-item">VR-Kit ingår</li>
+                            <li class="cards__list-item">VR TV</li>
                         </ul>
                     </details>
-                    <div class="card__footer">
-                        <div class="card__icon-wrapper">
-                            <div class="card__icon flex-center-col">
+                    <div class="cards__footer">
+                        <div class="cards__icon-wrapper">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/people-icon.svg" alt="2 Persons">
                                 <p>2 Personer</p>
                             </div>
-                            <div class="card__icon flex-center-col">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/cash-icon.svg" alt="Costs">
                                 <p>Bästa pris</p>
                             </div>
-                            <div class="card__icon flex-center-col">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/vr-icon.svg" alt="VR-headset">
                                 <p>VR-Headset</p>
                             </div>
                         </div>
-                        <div class="card__price-container">
-                            <p class="card__price">3 495 SEK</p>
+                        <div class="cards__price-container">
+                            <p class="cards__price">3 495 SEK</p>
                             <button class="button">Boka nu</button>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <article class="card__item">
-                <div class="card__img-container"><img src="/assets/photos/06-day.jpg" alt="Superior Room"></div>
-                <div class="card__info-container">
-                    <h3>Superior Suite</h3>
-                    <p>Detta deluxe rum är omkring 25-30 kvm och utrustade med en 180 cm säng. Dessa rum är funktionella och bekväma - allt du behöver för en härlig helg på Bonz.ai</p>
+            <article class="cards__item">
+                <div class="cards__img-container"><img src="/assets/photos/06-day.jpg" alt="Superior Room"></div>
+                <div class="cards__info-container">
+                    <header class="cards__header">
+                        <h3>Superior Suite</h3>
+                        <p>Detta deluxe rum är omkring 25-30 kvm och utrustade med en 180 cm säng. Dessa rum är funktionella och bekväma - allt du behöver för en härlig helg på Bonz.ai</p>
+                    </header>
                     <details>
-                        <summary class="card__dropdown-header">Mer information</summary>
-                        <ul class="card__dropdown-list">
-                            <li class="card__list-item">Frukost</li>
-                            <li class="card__list-item">Gym & träning</li>
-                            <li class="card__list-item">Spa & Relax</li>
-                            <li class="card__list-item">Badkar</li>
-                            <li class="card__list-item">Vattenfallsdusch</li>
-                            <li class="card__list-item">Gratis Wifi</li>
-                            <li class="card__list-item">Förvaringsskåp</li>
-                            <li class="card__list-item">Arbetsplats</li>
-                            <li class="card__list-item">Telefon</li>
-                            <li class="card__list-item">Strykhjärn</li>
-                            <li class="card__list-item">VR-Kit ingår</li>
-                            <li class="card__list-item">VR TV</li>
-                            <li class="card__list-item">Drönar leverans</li>
+                        <summary class="cards__dropdown-header">Mer information</summary>
+                        <ul class="cards__dropdown-list">
+                            <li class="cards__list-item">Frukost</li>
+                            <li class="cards__list-item">Gym & träning</li>
+                            <li class="cards__list-item">Spa & Relax</li>
+                            <li class="cards__list-item">Badkar</li>
+                            <li class="cards__list-item">Vattenfallsdusch</li>
+                            <li class="cards__list-item">Gratis Wifi</li>
+                            <li class="cards__list-item">Förvaringsskåp</li>
+                            <li class="cards__list-item">Arbetsplats</li>
+                            <li class="cards__list-item">Telefon</li>
+                            <li class="cards__list-item">Strykhjärn</li>
+                            <li class="cards__list-item">VR-Kit ingår</li>
+                            <li class="cards__list-item">VR TV</li>
+                            <li class="cards__list-item">Drönar leverans</li>
                         </ul>
                     </details>
-                    <div class="card__footer">
-                        <div class="card__icon-wrapper">
-                            <div class="card__icon flex-center-col">
+                    <div class="cards__footer">
+                        <div class="cards__icon-wrapper">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/people-icon.svg" alt="2 Persons">
                                 <p>2 Personer</p>
                             </div>
-                            <div class="card__icon flex-center-col">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/cash-icon.svg" alt="Costs">
                                 <p>Bästa pris</p>
                             </div>
-                            <div class="card__icon flex-center-col">
+                            <div class="cards__icon flex-center-col">
                                 <img src="/assets/icons/vr-icon.svg" alt="VR-headset">
                                 <p>VR-Headset</p>
                             </div>
                         </div>
-                        <div class="card__price-container">
-                            <p class="card__price">5 795 SEK</p>
+                        <div class="cards__price-container">
+                            <p class="cards__price">5 795 SEK</p>
                             <button class="button">Boka nu</button>
                         </div>
                     </div>
